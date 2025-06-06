@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Checker</title>
+</head>
+<body>
+  <script>
+    // Ask the user to enter a number
+    let num = prompt("Enter a number:\t");
+    num = Number(num);
+    let message = "";
+
+    if (isNaN(num)){
+      message = "ERROR: Not a valid number.";
+    }
+    else if (num > 0){
+      message = "The number is positive.";
+    }
+    else if (num < 0){
+      message = "The number is negative.";
+    }
+    else{
+      message = "The number is zero.";
+    }
+
+    // Display the message on the screen
+    document.write("<h3>" + message + "</h3>");
+  </script>
+</body>
+</html>
