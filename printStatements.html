@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom Repeater</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		let message = prompt("What message do you want to repeat?");
+		let times = prompt("How many times do you want to repeat it?");
+		times = Number(times);
+
+		if (!message || isNaN(times) || times <= 0) {
+			document.write("<h3>Invalid input. Please enter a valid message and a positive number.</h3>");
+		} else {
+			for (let i = 1; i <= times; i++) {
+				document.write(i + ". " + message + "<br>");
+			}
+		}
+	</script>
+</body>
+</html>
