@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Grade Checker</title>
+	</head>
+	<body>
+		<script>
+			let marks = window.prompt("Enter your marks:");
+			marks = Number(marks);
+
+			let grade = "";
+
+			if (isNaN(marks) || marks < 0 || marks > 100) {
+				grade = "Invalid input. Please enter marks between 0 and 100.";
+			} else {
+				switch (Math.floor(marks / 10)) {
+					case 10:
+            grade = "S: Perfect Score!";
+					case 9:
+						grade = "A: Very good!";
+						break;
+					case 8:
+						grade = "B: Good!";
+						break;
+					case 7:
+						grade = "C: Average";
+						break;
+					case 6:
+						grade = "D: Work Harder!";
+						break;
+					default:
+						grade = "F: Fail.";
+				}
+			}
+
+			document.write("<h2>Grade: " + grade + "</h2>");
+		</script>
+	</body>
+</html>
